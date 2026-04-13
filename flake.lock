@@ -1,0 +1,150 @@
+{
+  "nodes": {
+    "angle-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1775841716,
+        "narHash": "sha256-yqrEWB6FH5exe9e+lmIIkC5k7DIptqU/uY9Gnv3hTkA=",
+        "owner": "google",
+        "repo": "angle",
+        "rev": "1433dd4e8a59659f8e16a96f62c9ccedd3ce2e92",
+        "type": "github"
+      },
+      "original": {
+        "owner": "google",
+        "repo": "angle",
+        "rev": "1433dd4e8a59659f8e16a96f62c9ccedd3ce2e92",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "libepoxy-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767270175,
+        "narHash": "sha256-so6HfH12qn+wf1jkd2ny8eVUiLjHRaXvPW1WtTMwtxQ=",
+        "owner": "anholt",
+        "repo": "libepoxy",
+        "rev": "1b6d7db184bb1a0d9af0e200e06a0331028eaaae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anholt",
+        "repo": "libepoxy",
+        "rev": "1b6d7db184bb1a0d9af0e200e06a0331028eaaae",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1775710090,
+        "narHash": "sha256-ar3rofg+awPB8QXDaFJhJ2jJhu+KqN/PRCXeyuXR76E=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4c1018dae018162ec878d42fec712642d214fdfa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "qemu-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1745353644,
+        "narHash": "sha256-uEi/ezZkVARgz1uWA/7qrZm3jUWDrwkZdHScu8z2VWM=",
+        "type": "tarball",
+        "url": "https://download.qemu.org/qemu-10.0.0.tar.xz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://download.qemu.org/qemu-10.0.0.tar.xz"
+      }
+    },
+    "root": {
+      "inputs": {
+        "angle-src": "angle-src",
+        "flake-utils": "flake-utils",
+        "libepoxy-src": "libepoxy-src",
+        "nixpkgs": "nixpkgs",
+        "qemu-src": "qemu-src",
+        "treefmt-nix": "treefmt-nix",
+        "virglrenderer-src": "virglrenderer-src"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "treefmt-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1775636079,
+        "narHash": "sha256-pc20NRoMdiar8oPQceQT47UUZMBTiMdUuWrYu2obUP0=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "790751ff7fd3801feeaf96d7dc416a8d581265ba",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "virglrenderer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722587473,
+        "narHash": "sha256-iqyP3bdShSOV2miP2gg8vRI4LOMZHAZt9OXwX6ndm2M=",
+        "owner": "akihikodaki",
+        "repo": "virglrenderer",
+        "rev": "4a489584344787ea52226ac50dd9fa86a1f38f90",
+        "type": "github"
+      },
+      "original": {
+        "owner": "akihikodaki",
+        "repo": "virglrenderer",
+        "rev": "4a489584344787ea52226ac50dd9fa86a1f38f90",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

@@ -1,0 +1,11 @@
+.idea
+.claude
+.codex
+
+# Nix
+result
+result-*
+.direnv
+
+# macOS
+.DS_Store

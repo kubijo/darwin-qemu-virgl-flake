@@ -1,0 +1,31 @@
+name: CI
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  workflow_dispatch:
+# Cancel in-flight runs of the same workflow for the same ref when a new push lands.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  check:
+    name: nix flake check
+    # macos-15 is Apple Silicon (M1). Required because all flake outputs are
+    # `aarch64-darwin` only.
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Nix
+        uses: cachix/install-nix-action@v30
+        with:
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+            accept-flake-config = true
+      - name: Show flake metadata
+        run: nix flake metadata
+      - name: Run all flake checks (formatting + patches-apply)
+        run: nix flake check -L
